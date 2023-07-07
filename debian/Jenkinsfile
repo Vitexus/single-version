@@ -43,7 +43,7 @@ distributions.each {
             }
             stage('Build ' + distribution) {
                 buildImage.inside {
-                    sh 'sudo tar -cJf ../single-version_' + ver + '.orig.tar.xz .'
+                    sh 'sudo tar -cJf ../single-version_' + VERSION + '.orig.tar.xz .'
                     sh 'dch -b -v ' + ver  + ' "' + env.BUILD_TAG  + '"'
                     sh 'sudo apt-get update --allow-releaseinfo-change'
                     sh 'sudo chown jenkins:jenkins ..'
