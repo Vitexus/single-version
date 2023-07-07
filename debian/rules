@@ -4,5 +4,6 @@
 # Fri, 07 Jul 2023 00:22:02 +0200
 export PYBUILD_NAME=single-version
 %:
-	dh $@ --with python3 --buildsystem=pybuild
+	dh $@ --with python3 --buildsystem=pybuild --system
+
 
